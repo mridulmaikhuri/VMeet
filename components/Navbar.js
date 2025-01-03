@@ -2,15 +2,21 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import MobileNav from './MobileNav'
+import {
+  SignInButton,
+  SignedIn,
+  SignedOut,
+  UserButton
+} from '@clerk/nextjs'
 
 const Navbar = () => {
   return (
-    <nav className='flex-between fixed z-50 w-full bg-gray-800 px-6 py-4 lg:px-10'>
+    <nav className='flex justify-between fixed z-50 w-full bg-gray-800 px-6 py-4 lg:px-10'>
       <Link
-       href="/"
-       className='flex items-center gap-1'
+        href="/"
+        className='flex items-center gap-1'
       >
-        <Image 
+        <Image
           src="/icons/logo.svg"
           alt="Zoom Logo"
           width={36}
@@ -19,7 +25,13 @@ const Navbar = () => {
         />
         <p className='text-[26px] font-extrabold text-white max-sm:hidden'>Zoom</p>
       </Link>
-      <div className='flex-between gap-5 sm:hidden'>
+      <div className='gap-5 sm:hidden'>
+        <SignedOut>
+          <SignInButton />
+        </SignedOut>
+        <SignedIn>
+          <UserButton />
+        </SignedIn>
         <MobileNav />
       </div>
     </nav>
