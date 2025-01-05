@@ -25,15 +25,18 @@ const Navbar = () => {
         />
         <p className='text-[26px] font-extrabold text-white max-sm:hidden'>Zoom</p>
       </Link>
-      <div className='gap-5 sm:hidden'>
+      <div  className='flex gap-3'>
         <SignedOut>
           <SignInButton />
         </SignedOut>
         <SignedIn>
           <UserButton />
         </SignedIn>
-        <MobileNav />
+        <div className='gap-5 sm:hidden'>
+          <MobileNav />
+        </div>
       </div>
+
     </nav>
   )
 }

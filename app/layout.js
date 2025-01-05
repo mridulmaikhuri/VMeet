@@ -27,7 +27,13 @@ export default function RootLayout({ children }) {
         <meta name="description" content={metadata.description} />
         <link rel="icon" href="/icons/logo.svg" />
       </head>
-      <ClerkProvider>
+      <ClerkProvider
+        appearance={{
+          layout: {
+            logoImageUrl: "/icons/logo.svg",
+          }
+        }}
+      >
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-900`}
         >
