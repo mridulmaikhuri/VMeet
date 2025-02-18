@@ -23,7 +23,7 @@ const Navbar = () => {
           height={36}
           className='max-sm:size-10'
         />
-        <p className='text-[26px] font-extrabold text-white max-sm:hidden'>Zoom</p>
+        <p className='text-[26px] font-extrabold text-white max-sm:hidden'>VMeet</p>
       </Link>
       <div  className='flex gap-3'>
         <SignedOut>
